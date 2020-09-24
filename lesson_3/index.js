@@ -49,8 +49,8 @@ console.log('const a = 17: ', a);
 const b = -a;
 console.log('const b = -a: ', b);
 
-// '24' / 4;
-console.log("24' / 4: ", '24' / 4);
+'24' / 4;
+console.log("'24' / 4: ", '24' / 4);
 
 18 * '3';
 console.log("18 * '3': ", 18 * '3');
