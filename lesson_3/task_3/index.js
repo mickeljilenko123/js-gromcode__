@@ -13,9 +13,8 @@ console.log('a != b: ', a != b);
 
 
 /* сравнение строк */
-
 'a' < 'b';
-console.log("'a' < 'b' : ", 'a' < 'b');
+console.log("'a' < 'b': ", 'a' < 'b');
 'ab' > 'a';
 console.log("'ab' > 'a': ", 'ab' > 'a');
 
