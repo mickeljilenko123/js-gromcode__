@@ -8,8 +8,11 @@ const sum = (from, to) => {
 }
 
 function compareSums(a, b, c, d) {
-    let bool = (sum(a, b) >= sum(c, d)) && (sum(a, b) <= sum(c, d));
-    return bool;
+    if (sum(a, b) > sum(c, d)) {
+        return true;
+    } else {
+        return false;
+    }
 }
-const result = compareSums(2, 5, 7, 6);
+const result = compareSums(10, 5, 7, 6);
 console.log(result);
