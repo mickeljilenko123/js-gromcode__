@@ -7,5 +7,5 @@ let c = sum / 1234;
 let d = sum % 1234;
 // console.log(d); //730
 
-let bool = (c > d) || (c < d);
+let bool = (c > d) && (c < d);
 console.log(bool);
