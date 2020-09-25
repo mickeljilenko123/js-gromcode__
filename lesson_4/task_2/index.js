@@ -1,5 +1,5 @@
 let m = 15;
-let n = 20;
+const n = 20;
 let result = 1;
 
 do {
@@ -7,5 +7,5 @@ do {
         result *= m;
     }
     m++;
-} while (m < n);
+} while (m <= n);
 console.log("Result: ", result);
