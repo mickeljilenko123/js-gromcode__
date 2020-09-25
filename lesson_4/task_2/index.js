@@ -8,4 +8,4 @@ do {
     }
     m++;
 } while (m <= n);
-console.log("Result: ", result);
+console.log("Result: " + result);
