@@ -1,24 +1,23 @@
-let m = 2;
+const m = 2;
 const n = 45;
+let a = m;
 let result = 0;
 
-while (m <= n) {
-    if (m % 2 === 0 || m % 4 !== 0) {
-        result += m;
+while (a <= n) {
+    if (a % 2 === 0 || a % 4 !== 0) {
+        result += a;
         continue;
     }
-    if (m % 3 === 0) {
-        result -= m;
+    if (a % 3 === 0) {
+        result -= a;
         continue;
     }
-    if (m % 4 === 0) {
-        result *= m;
+    if (a % 4 === 0) {
+        result *= a;
         continue;
     }
-    if (m % 5 === 0) {
-        console.log(m);
-        continue;
+    if (a % 5 === 0) {
+        console.log(a);
     }
-    m++;
+    a++;
 }
-console.log(result);
