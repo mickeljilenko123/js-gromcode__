@@ -11,8 +11,13 @@ while (m <= n) {
         result -= m;
         continue;
     }
+    if (m % 4 === 0) {
+        result *= m;
+        continue;
+    }
     if (m % 5 === 0) {
         console.log(m);
+        continue;
     }
     m++;
 }
