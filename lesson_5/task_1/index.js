@@ -1,4 +1,5 @@
 function sum(a, b) {
-    console.log(a + b);
+    return a + b;
 }
-sum(2, 4);
+const result = sum(2, 4);
+console.log(result);
