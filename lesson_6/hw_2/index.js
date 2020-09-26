@@ -1,4 +1,5 @@
 const createEmptyArray = () => {
     const arr = new Array();
-    return arr;
+    console.log(arr);
 }
+createEmptyArray();
