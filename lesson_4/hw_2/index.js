@@ -8,8 +8,6 @@ while (a <= n) {
         result += a;
     } else if (a % 4 === 0) {
         result *= a;
-    } else if (a % 3 === 0 && a % 5 === 0) {
-        result -= a;
     } else if (a % 3 === 0) {
         result -= a;
     } else if (a % 5 === 0) {
