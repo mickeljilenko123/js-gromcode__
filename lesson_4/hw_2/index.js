@@ -6,15 +6,19 @@ let result = 0;
 while (a <= n) {
     if (a % 5 === 0) {
         console.log(a);
+        break;
     }
     if (a % 4 === 0) {
         result *= a;
+        break;
     }
     if (a % 3 === 0) {
         result -= a;
+        break;
     }
     if (a % 2 === 0 && a % 4 !== 0) {
         result += a;
+        break;
     }
     a++;
 }
