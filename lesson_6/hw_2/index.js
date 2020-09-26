@@ -1,6 +1,4 @@
-function createEmptyArray(len) {
-    const arr = [];
+const createEmptyArray = (len) => {
+    const arr = new Array();
     return arr;
 }
-const arr = createEmptyArray();
-console.log(arr);
