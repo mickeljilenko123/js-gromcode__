@@ -4,9 +4,8 @@ let a = m;
 let result = 0;
 
 while (a <= n) {
-    if (a % 5 === 0) {
-        console.log(a);
-    } else if (a % 2 === 0 && a % 4 !== 0) {
+
+    if (a % 2 === 0 && a % 4 !== 0) {
         result += a;
     } else if (a % 2 === 0 && a % 4 === 0) {
         result += a;
@@ -15,7 +14,10 @@ while (a <= n) {
     } else if (a % 3 === 0) {
         result -= a;
     } else if (a % 3 === 0 && a % 5 === 0) {
-        result -= a;
+        console.log(a);
+    }
+    if (a % 5 === 0) {
+        console.log(a);
     }
     a++;
 }
