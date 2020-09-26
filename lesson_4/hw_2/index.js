@@ -9,16 +9,16 @@ while (a <= n) {
     }
     if (a % 2 === 0 && a % 4 !== 0) {
         result += a;
-        console.log('a % 2 === 0 && a % 4 !== 0 ' + result);
+        // console.log('a % 2 === 0 && a % 4 !== 0 ' + result);
     }
     if (a % 3 === 0) {
         result *= a;
-        console.log('a % 3 === 0 ' + result);
+        // console.log('a % 3 === 0 ' + result);
     }
     if (a % 4 === 0) {
         result -= a;
-        console.log('a % 4 === 0 ' + result);
+        // console.log('a % 4 === 0 ' + result);
     }
     a++;
 }
-console.log(result);
+// console.log(result);
