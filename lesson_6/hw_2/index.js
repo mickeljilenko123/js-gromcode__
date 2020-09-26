@@ -1,5 +1,5 @@
-const createEmptyArray = () => {
+const createEmptyArray = (len) => {
     const arr = new Array();
     console.log(arr);
 }
-createEmptyArray();
+createEmptyArray(len);
