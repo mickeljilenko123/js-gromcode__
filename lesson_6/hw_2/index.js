@@ -1,4 +1,4 @@
-function createEmptyArray() {
+function createEmptyArray(len) {
     const arr = [];
     return arr;
 }
