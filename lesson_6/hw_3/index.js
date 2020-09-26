@@ -1,5 +1,5 @@
 const numbers = [2, 4, 6, 8, 9];
-let copySquare = numbers;
+let copySquare = numbers.slice();
 const squareArray = (arr) => {
     if (!Array.isArray(arr)) {
         return null;
