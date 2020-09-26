@@ -1,7 +1,7 @@
 const m = 2;
 const n = 45;
 let a = m;
-let result = 0;
+let result = 1;
 
 while (a <= n) {
     if (a % 3 === 0 && a % 5 === 0) {
