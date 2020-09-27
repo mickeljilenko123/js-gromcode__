@@ -1,7 +1,7 @@
 const clients = ['Ann', 'John', 'User'];
-const client = 'User';
+const client = 'John';
 const balances = [1400, 87, -6];
-const amount = 10;
+const amount = 50;
 
 const withdraw = (clients, client, balances, amount) => {
     for (let i = 0; i < balances.length; i++) {
