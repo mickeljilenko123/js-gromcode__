@@ -1,4 +1,4 @@
-const arr = [2, 4, 5, 6];
+const num = [2, 4, 5, 6];
 
 const cloneArr = (arr) => {
 
@@ -6,9 +6,9 @@ const cloneArr = (arr) => {
         return null;
     }
 
-    const [...arr1] = arr;
+    const [...arr1] = num;
     return arr1;
 }
 
-const res = cloneArr(arr);
+const res = cloneArr(num);
 console.log(res);
