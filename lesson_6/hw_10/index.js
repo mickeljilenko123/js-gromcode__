@@ -6,9 +6,9 @@ const amount = 10;
 const withdraw = (clients, client, balances, amount) => {
     for (let i = 0; i < balances.length; i++) {
         if (balances.indexOf(balances[i]) === clients.indexOf(client)) {
-            if (balances[i] >= amount) {
+            if (amount <= balances[i]) {
                 balances[i] -= amount;
-            } else {
+            } else if (amount > balances[i]) {
                 return -1;
             }
         }
