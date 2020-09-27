@@ -1,4 +1,4 @@
-const reverseArray = (arr1) => {
+const reverseArray = (arr) => {
     if (!Array.isArray(arr)) {
         return null;
     }
@@ -6,7 +6,7 @@ const reverseArray = (arr1) => {
     return reverseArray;
 }
 
-const arr = [2, 6, 7, 25, 8, 9];
-const [...arr1] = arr;
+const arr0 = [2, 6, 7, 25, 8, 9];
+const [...arr1] = arr0;
 const res = reverseArray(arr1);
 console.log(res);
