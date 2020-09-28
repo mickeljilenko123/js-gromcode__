@@ -13,7 +13,7 @@
 //4. Если тякущего эл нет в новом массиве тогда мы его пушим
 //5. Если есть то мы его не пушим.
 
-const arr = [2, 3, 3, 4, 4];
+const arr = [2, 3, 3, 4, 4, 5, 5, 6, 6];
 const removeDuplicates = (arr) => {
     if (!Array.isArray(arr)) {
         return null;
