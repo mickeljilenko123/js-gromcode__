@@ -1,6 +1,6 @@
-// 1. input array
-// 2. output num
-// 
+//  input array
+//  output num
+// Проверяем каждый эл на количество повторений
 const arr = [2, 2, 3, 3, 4, 4, 5]
 
 const uniqueCount = (arr) => {
@@ -14,3 +14,4 @@ const uniqueCount = (arr) => {
         }
     }
 }
+uniqueCount(arr)
