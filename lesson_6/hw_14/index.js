@@ -1,6 +1,8 @@
 //  input array
 //  output num
 // Проверяем каждый эл на количество повторений
+// Если количество эл больше 1 повторения
+//  тогда мы его прибавляем к переменной 
 const arr = [2, 2, 3, 3, 4, 4, 5]
 
 const uniqueCount = (arr) => {
@@ -14,4 +16,4 @@ const uniqueCount = (arr) => {
         }
     }
 }
-uniqueCount(arr)
+uniqueCount(arr);
