@@ -1,11 +1,11 @@
-const arr = [2, 3, 5, 6];
-const num = 6;
+const arr1 = [2, 3, 5, 6];
+const num1 = 6;
 
 const includes = (arr, num) => {
-    if (arr.includes(num)) {
+    if (arr1.includes(num1)) {
         return true;
     } else {
         return false;
     }
 }
-console.log(includes(arr, num));
+console.log(includes(arr1, num1));
