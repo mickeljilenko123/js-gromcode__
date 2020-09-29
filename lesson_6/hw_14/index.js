@@ -11,9 +11,7 @@ const uniqueCount = (arr) => {
     }
     const arr = [2, 2, 3, 3, 4, 4, 5]
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > i) {
-            console.log(arr[i]);
-        }
+        for (let n = 0; n)
     }
 }
 uniqueCount(arr);

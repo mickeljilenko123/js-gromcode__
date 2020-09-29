@@ -5,26 +5,14 @@
 const arr = [11, 4, 8, 3];
 let num = 3;
 const getSubArray = (arr, num) => {
-
     let arr1 = [];
-
+    let num1 = 0;
     for (let i = 0; i < arr.length; i++) {
-        for (let n = 0; n < num; n++) {
-            console.log(n);
+        num1++;
+        if (num1 <= num) {
+            arr1.push(arr[i])
         }
     }
+    return arr1;
 }
-getSubArray(arr);
-
-const arr = [11, 4, 8, 3];
-let num = 3;
-let arr1 = [];
-let num1 = 0;
-for (let i = 0; i < arr.length; i++) {
-    num1++;
-    if (num1 <= num) {
-        arr1.push(arr[i])
-    }
-}
-console.log(arr1);
-return arr1;
+console.log(getSubArray(arr, num));
