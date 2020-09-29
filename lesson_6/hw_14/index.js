@@ -3,19 +3,18 @@
 // Проверяем каждый эл на количество повторений
 // Если количество эл больше 1 повторения
 //  тогда мы его прибавляем к переменной 
-const num = [2, 2, 3, 3, 4, 4, 5]
+const num = [1, 4, 1, 8, 3, 4, 8, 8]
     // const [...num1] = num;
 const uniqueCount = (arr) => {
     if (!Array.isArray(arr)) {
         return null;
     }
-    let newArray = [];
-    for (let i = 0; i < num.length; i++) {
-        if (!num[i] === newArray.includes(num[i])) {
-            newArray.push(num[i]);
+    const newArr = [];
+    for (let i = 0; i < num.length; i += 1) {
+        if (!num[i] === newArr.includes(num[i])) {
+            newArr.push(num[i]);
         }
     }
-    console.log(newArray.length);
-    return newArray;
+    return newArr.length;
 }
-uniqueCount(num);
+console.log(uniqueCount(num));
