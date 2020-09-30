@@ -5,7 +5,7 @@ const arr = [1, 16, 3, 9];
 
 const sortDesc = (numbers) => {
     const copy = [...numbers];
-    return copy.sort((a, b) => a - b);
+    return copy.sort((a, b) => b - a);
 
 };
 console.log(sortDesc(arr));
