@@ -9,14 +9,9 @@ const withdraw = (clients, balances, client, amount) => {
     let current = 0;
     balances.forEach((elem) => {
         if (balances.indexOf(elem) === clients.indexOf(client)) {
-            current += balances.indexOf(elem);
+            current += elem;
         }
-    })
-    if (current > amount) {
-        current -= amount;
-    }
-    return current;
-
-
+    });
+    return (current > amount) ? current -= amount : -1;
 }
 console.log(withdraw(clients, balances, client, amount));
