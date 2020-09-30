@@ -1,9 +1,9 @@
-const arr = [2, 5, 7, 9];
+const numbers = [2, 5, 7, 9];
 
-const squareArray = (numbers) => {
+const squareArray = (arr) => {
     if (!Array.isArray(arr)) {
         return null;
     }
     return numbers.map((elem) => elem * elem);
 }
-console.log(squareArray(arr));
+console.log(squareArray(numbers));
