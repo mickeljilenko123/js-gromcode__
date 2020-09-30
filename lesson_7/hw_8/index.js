@@ -1,4 +1,4 @@
-const numbers = [2, 4, 6, 8];
+const numbers = [2, 5, 6, 3];
 
 const arrAverage = (arr) => {
     if (!Array.isArray(arr)) {
