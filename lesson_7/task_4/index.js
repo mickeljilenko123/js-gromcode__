@@ -18,9 +18,9 @@
 const allStud = ['Ann', 'Bob', 'Kate', 'Tom'];
 const retakeStud = ['Bob', 'Tom'];
 
-const getMessagesForBestStudents = (allStud, retakeStud) => {
-    return allStud
-        .filter((elem) => !retakeStud.includes(elem))
+const getMessagesForBestStudents = (allStudents, failStudents) => {
+    return allStudents
+        .filter((elem) => !failStudents.includes(elem))
         .map((elem) => 'Good job, ' + elem)
 };
 
