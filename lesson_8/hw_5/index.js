@@ -6,9 +6,23 @@ const pickProps = (obj, arr) => {
 
     for (let key in obj) {
         if (arr.includes(key)) {
-            console.log(key);
+            arr2[key] = obj[key];
         }
     }
     return arr2;
 }
-pickProps(obj, arr1);
+console.log(pickProps(obj, arr1));
+
+
+
+// const data = [
+//     {
+//         a: { name: "vasya", age: 54 },
+//         b: { name: "petya", age: 74 }
+//     }
+//     , {
+//         c: { pet: 'dog', home: 'huy' },
+//         d: { pet: 'cat', home: 'bazar' },
+//         e: { pet: 'pig', home: 'ass' }
+//     },
+// ];
