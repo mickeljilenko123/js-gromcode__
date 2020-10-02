@@ -6,9 +6,9 @@ const obj1 = {
 
 const getAdults = (obj) => {
     const obj2 = {};
-    Object.keys(obj1).filter((e) => {
-        if (obj1[e] >= 18) {
-            obj2[e] = obj1[e];
+    Object.keys(obj).filter((e) => {
+        if (obj[e] >= 18) {
+            obj2[e] = obj[e];
         }
     })
     return obj2;
