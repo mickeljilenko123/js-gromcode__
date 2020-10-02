@@ -1,28 +1,42 @@
-const obj = { a: 1 };
-const name = 'Vasia';
+// input: object
+//output: object
+
+const obj = {
+    age: 28,
+    city: "Varva"
+}
+const key = 'name';
+const value = 'Misha';
 
 const addPropertyV1 = (obj, key) => {
-    obj['name'] = name;
+    obj[key] = value;
     return obj;
-};
-console.log(addPropertyV1(obj, name));
-
-const addPropertyV2 = (obj, name) => {
-    const obj1 = { name: 'Vasia' }
-    const arr = Object.assign(obj, obj1);
-    return arr;
 }
-console.log(addPropertyV2(obj, name));
+console.log(addPropertyV1(obj, key));
 
-const addPropertyV3 = (obj, name) => {
-    const obj1 = { name: 'Vasia' }
-    const arr1 = Object.assign({}, obj, obj1);
-    return arr1;
-}
-console.log(addPropertyV2(obj, name));
 
-const addPropertyV4 = (obj, name) => {
-    const obj1 = {...obj };
-    return obj1;
+const addPropertyV2 = (obj, key) => {
+
+    const newObj = Object.assign(obj, {
+        [key]: value });
+    return newObj;
 }
-console.log(addPropertyV4(obj, name));
+console.log(addPropertyV2(obj, key));
+
+
+
+const addPropertyV3 = (obj, key) => {
+
+    const newObj = Object.assign({}, obj, {
+        [key]: value });
+    // obj[key] = value;
+    return newObj;
+}
+console.log(addPropertyV3(obj, key));
+
+const addPropertyV4 = (obj, key) => {
+    const newObj = Object.assign({...obj }, {
+        [key]: value });
+    return newObj;
+}
+console.log(addPropertyV4(obj, key));
