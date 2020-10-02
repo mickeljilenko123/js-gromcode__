@@ -5,6 +5,7 @@ const obj = {
     age: 28,
     city: "Varva"
 }
+
 const key = 'name';
 const value = 'Misha';
 
@@ -16,9 +17,9 @@ console.log(addPropertyV1(obj, key));
 
 
 const addPropertyV2 = (obj, key) => {
-
     const newObj = Object.assign(obj, {
-        [key]: value });
+        [key]: value
+    });
     return newObj;
 }
 console.log(addPropertyV2(obj, key));
@@ -26,17 +27,20 @@ console.log(addPropertyV2(obj, key));
 
 
 const addPropertyV3 = (obj, key) => {
-
     const newObj = Object.assign({}, obj, {
-        [key]: value });
+        [key]: value
+    });
     // obj[key] = value;
     return newObj;
 }
 console.log(addPropertyV3(obj, key));
 
+
+
 const addPropertyV4 = (obj, key) => {
     const newObj = Object.assign({...obj }, {
-        [key]: value });
+        [key]: value
+    });
     return newObj;
 }
 console.log(addPropertyV4(obj, key));

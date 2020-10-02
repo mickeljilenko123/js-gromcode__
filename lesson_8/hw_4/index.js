@@ -7,22 +7,21 @@ const mergeObjectsV1 = (obj1, obj2) => {
 }
 console.log(mergeObjectsV1(obj1, obj2));
 
+
 const mergeObjectsV2 = (obj1, obj2) => {
-    const obj3 = Object.assign({}, obj2, obj1);
-    return obj3;
+    const newObj = Object.assign({}, obj2, {...obj1 });
+    return newObj;
 }
-console.log(mergeObjectsV1(obj1, obj2));
+console.log(mergeObjectsV2(obj1, obj2));
 
 const mergeObjectsV3 = (obj1, obj2) => {
-    let obj3 = {...obj1 };
-    obj3 = {...obj2 };
-    return obj3
+    const newObj = Object.assign({...obj1 }, {...obj2 });
+    return newObj;
 }
-console.log(mergeObjectsV1(obj1, obj2));
+console.log(mergeObjectsV3(obj1, obj2));
 
 const mergeObjectsV4 = (obj1, obj2) => {
-    let obj3 = {...obj2 };
-    obj3 = {...obj1 };
-    return obj3
+    const newObj = Object.assign({...obj2 }, {...obj1 });
+    return newObj;
 }
-console.log(mergeObjectsV1(obj1, obj2));
+console.log(mergeObjectsV4(obj1, obj2));
