@@ -1,7 +1,7 @@
 const obj1 = {
-    'John Doe': 19,
+    'John Doe': 17,
     'Tom': 17,
-    'Bob': 18,
+    'Bob': 17,
 }
 
 const getAdults = (obj) => {
