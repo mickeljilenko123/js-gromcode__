@@ -4,6 +4,8 @@ const obj1 = {
     'Bob': 18,
 }
 
+
+
 const getAdults = (obj) =>
     Object.entries(obj)
     .filter((e) => e[1] >= 18)
