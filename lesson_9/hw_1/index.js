@@ -10,16 +10,6 @@ const obj2 = {
     ],
 };
 
-const getPeople = (obj) => {
-    let arr = [];
-    Object.values(obj)
-        .forEach(elem => {
-            elem.forEach(e => {
-                console.log(e);
-                arr.push(e['name'])
-            })
-        });
-    console.log(arr);
-    return arr;
-}
-getPeople(obj2);
+const getPeople = (obj) =>
+    Object.values(obj).flat().map(e => e['name']);
+console.log(getPeople(obj2));
