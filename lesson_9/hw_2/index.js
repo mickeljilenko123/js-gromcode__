@@ -3,9 +3,9 @@ const dayTransactions = [
     { userId: 22, amount: 160, operation: 'buy' },
     { userId: 44, amount: 90, operation: 'sell' },
 ];
-const getTotalRevenue = (obj, key) =>
+const getTotalRevenue = (obj) =>
     obj.reduce((acc, e) => {
-        return acc + e[key]
+        return acc + e['amount']
     }, 0)
 
-console.log(getTotalRevenue(dayTransactions, 'amount'));
+console.log(getTotalRevenue(dayTransactions));
