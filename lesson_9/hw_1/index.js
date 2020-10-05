@@ -12,7 +12,7 @@ const obj2 = {
 
 const getPeople = (obj) => {
     let arr = [];
-    Object.values(obj2)
+    Object.values(obj)
         .forEach(elem => {
             elem.forEach(e => {
                 console.log(e);
