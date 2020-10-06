@@ -13,5 +13,5 @@ const getParsedFloats = num =>
 console.log(getParsedFloats(numbers));
 
 const getParsedFloatsV2 = num =>
-    num.map(e => Number.parseFloat(e))
+    num.map(e => parseFloat(e))
 console.log(getParsedFloatsV2(numbers));
