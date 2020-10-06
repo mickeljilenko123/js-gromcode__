@@ -7,24 +7,17 @@ const getFiniteNumbers = num =>
     num.filter(e => Number.isFinite(e))
 console.log(getFiniteNumbers(numbers));
 
-
-
-
 const getFiniteNumbersV2 = num =>
     num.filter(e => isFinite(e))
 console.log(getFiniteNumbersV2(numbers));
-
-
 
 const getNaN = num =>
     num.filter(e => Number.isNaN(e))
 console.log(getNaN(numbers));
 
-
 const getNaNV2 = num =>
     num.filter(e => isNaN(e))
 console.log(getNaNV2(numbers));
-
 
 const getIntegers = num =>
     num.filter(e => Number.isInteger(e))
