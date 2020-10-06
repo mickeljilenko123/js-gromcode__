@@ -1,7 +1,10 @@
 const numbers = [2.3, 2.5, -50, -99];
 
-const getMaxAbsoluteNumber = num => {
-    const absoluteNum = num.map(e => Math.abs(e));
+const getMaxAbsoluteNumber = arr => {
+    if (!Array.isArray(arr)) {
+        return null;
+    }
+    const absoluteNum = arr.map(e => Math.abs(e));
     const max = Math.max(...absoluteNum);
     return max;
 };
