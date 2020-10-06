@@ -1,8 +1,12 @@
 const numbers = -2.5;
-const multiRound = num => [
-    Math.floor(num),
-    Math.round(num),
-    Math.ceil(num),
-    Math.trunc(num), +num.toFixed(1),
-];
-console.log(multiRound(Math.abs(numbers)));
+const multiRound = num => {
+    const numAbs = Math.abs(num);
+    const arr = [
+        Math.floor(numAbs),
+        Math.round(numAbs),
+        Math.ceil(numAbs),
+        Math.trunc(numAbs), +numAbs.toFixed(1),
+    ];
+    return arr;
+}
+console.log(multiRound(numbers));
