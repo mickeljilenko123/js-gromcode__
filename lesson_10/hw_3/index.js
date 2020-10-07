@@ -1,14 +1,13 @@
-const num1 = -5.149;
-const num2 = 2;
+const element = -5.149;
+const n = 2;
 
-const superRound = (num1, num2) => {
-    const abs = Math.abs(num1);
-    const arr = [
-        Math.floor(abs),
-        Math.round(abs),
-        Math.ceil(abs),
-        Math.trunc(abs), +abs.toFixed(num2),
+function superRound(num, n) {
+    let roundNumber = Math.pow(10, n);
+    return [
+        Math.floor(num * roundNumber) / roundNumber,
+        Math.round(num * roundNumber) / roundNumber,
+        Math.ceil(num * roundNumber) / roundNumber,
+        Math.trunc(num * roundNumber) / roundNumber, +num.toFixed(n),
     ];
-    return arr;
 }
-console.log(superRound(num1, num2));
+console.log(superRound(element, num));
