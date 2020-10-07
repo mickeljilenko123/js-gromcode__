@@ -1,4 +1,4 @@
-const text = 'mynameisvasya';
+const text = 'mynameisvasyamynameisvasya';
 const num = 4;
 
 const splitString = (text, num = 10) => {
