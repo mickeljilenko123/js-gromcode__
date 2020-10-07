@@ -1,7 +1,7 @@
 const text = 'mynameisvasya';
 const num = 4;
 
-const splitText = (text, num = 10) => {
+const splitString = (text, num = 10) => {
     let arr = [];
     let subStr1 = 0;
     while (true) {
@@ -16,4 +16,4 @@ const splitText = (text, num = 10) => {
     arr[3] = 'A...';
     return arr;
 };
-console.log(splitText(text, num));
+console.log(splitString(text, num));
