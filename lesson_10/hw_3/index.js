@@ -10,4 +10,4 @@ function superRound(num, n) {
         Math.trunc(num * roundNumber) / roundNumber, +num.toFixed(n),
     ];
 }
-console.log(superRound(element, num));
+console.log(superRound(element, n));
