@@ -2,7 +2,7 @@ const text = 'mynameisvasya';
 const num = 4;
 
 const splitText = (text, num = 10) => {
-    if (!text == String) {
+    if (!text === String) {
         return null;
     }
     let arr = [];
