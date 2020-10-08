@@ -1,4 +1,9 @@
-function reverseString(str) {
+const str = 'hello';
+
+const reverseString = str => {
+    if (str !== 'string') {
+        return null;
+    }
     return str.split("").reverse().join("");
 }
-console.log(reverseString("hello"));
+console.log(reverseString(str));
