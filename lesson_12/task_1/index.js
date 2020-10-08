@@ -1,4 +1,4 @@
-const str = '1 / 2';
+const str = '1 + 2';
 
 
 const calc = str => {
@@ -14,4 +14,5 @@ const calc = str => {
             return a[0] / a[2];
     }
 }
-console.log(calc(str));
+const result = calc(str);
+console.log('1 + 2 =', result);
