@@ -1,4 +1,4 @@
-const str = '1 + 2';
+const str = '1 * 2';
 
 
 const calc = str => {
@@ -15,4 +15,4 @@ const calc = str => {
     }
 }
 const result = calc(str);
-console.log('1 + 2 =', result);
+console.log(str + ' = ' + result);
