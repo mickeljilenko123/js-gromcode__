@@ -1,7 +1,7 @@
 const str = 'hello';
 
 const reverseString = str => {
-    if (str !== 'string') {
+    if (typeof str !== 'string') {
         return null;
     }
     return str.split("").reverse().join("");
