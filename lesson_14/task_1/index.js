@@ -1,12 +1,12 @@
 'use strict';
 let message = 'Just learn it!';
 
-function sendMessage(name) {
+export function sendMessage(name) {
     const sender = 'Gromcode';
     console.log(`${name}, ${message} Your ${sender}`);
 }
 
-function setMessage(newText) {
+export function setMessage(newText) {
     message = newText;
 }
 
