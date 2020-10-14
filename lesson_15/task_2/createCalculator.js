@@ -1,11 +1,9 @@
 export function createCalculator() {
     let num = 0;
-
-    return {
+    const obj = {
         add(num1) {
             return num += num1;
         },
-
         decrease(num2) {
             return num -= num2;
         },
@@ -15,8 +13,8 @@ export function createCalculator() {
         getMemo() {
             return num;
         },
-    }
-
+    };
+    return obj;
 }
 const add1 = createCalculator();
 console.log(add1.add(6));
