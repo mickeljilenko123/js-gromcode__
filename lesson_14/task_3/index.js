@@ -1,18 +1,31 @@
 let num1 = 0;
+
 export function add(num) {
-    return num1 += num;
+    num1 += num;
+    console.log(num1);
+    return
+
 }
+
 export function decrease(num2) {
-    return num2 -= num1;
+    num1 -= num2;
+    console.log(num1);
+    return
 }
+
 export function reset() {
-    return num1 = 0;
+    num1 = 0;
+    console.log(num1);
+    return;
 }
+
 export function getMemo() {
-    return num1;
+    num1;
+    console.log(num1);
+    return
 }
 
 add(4);
-decrease(8);
+decrease(2);
 reset();
 getMemo();
