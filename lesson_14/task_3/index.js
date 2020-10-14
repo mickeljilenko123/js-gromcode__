@@ -11,7 +11,8 @@ export function reset() {
 export function getMemo() {
     return num1;
 }
-getMemo();
-reset();
-add(4);
-decrease(8);
+
+console.log(add(4));
+console.log(decrease(8));
+console.log(getMemo());
+console.log(reset());
