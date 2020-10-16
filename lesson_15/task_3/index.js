@@ -1,28 +1,31 @@
 // input: string
 // output: obj
 
-const createLogger = () => {
-    let warn = '';
-    let error = '';
-    let log = '';
+export const createLogger = () => {
+
+    let arr = [];
+
     return {
-        warn(warn1) {
-            return warn += warn1;
+        warn(message) {
+            return arr.push({ message, dataTime: new Date(), type: 'warn' })
         },
-        error(error1) {
-            return error += error1;
+        error(message) {
+            return arr.push({ message, dataTime: new Date(), type: 'error' })
         },
-        log(log1) {
-            return log += log1;
+        log(message) {
+            return arr.push({ message, dataTime: new Date(), type: 'log' })
         },
+        getRecords(type) {
+            return type ? arr.filter(e => e.type === type)
+                .sort((a, b) => { a.dataTime - b.dataTime }) : arr;
+        }
     }
 }
-const warn1 = createLogger();
-warn1.warn('предупреждение об ошибке');
-const error1 = createLogger();
-error1.error('ошибка');
-const log1 = createLogger();
-log1.log('обычное сообщение');
-
-
-{ message: [сохраненное сообщение], dateTime: [время регистрации сообщения(используем new Date() - текущее время)], type: [тип записи] }
+const logger = createLogger();
+logger.warn('User logged in');
+logger.error('User try to restricted page');
+logger.log('User logged out');
+logger.getRecords();
+console.log(logger.getRecords('log'));
+logger.getRecords('error');
+logger.getRecords('warn');
