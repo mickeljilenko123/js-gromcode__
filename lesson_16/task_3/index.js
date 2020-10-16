@@ -4,10 +4,13 @@
 
 
 export const createArrayOfFunctions = (num) => {
+
     if (typeof number !== num) {
         return null;
     }
-    let arr = [];
+
+
+    var arr = [];
 
     for (let i = 0; i <= num; i++) {
         arr[i] = function() {
@@ -17,3 +20,9 @@ export const createArrayOfFunctions = (num) => {
     return arr;
 }
 createArrayOfFunctions(7)[7]();
+
+
+
+if (typeof number !== num) {
+    return null;
+}
