@@ -4,8 +4,6 @@ export function defer(func, ms) {
     }
 };
 const obj = {
-    a: 1,
-    b: 2,
     sum() {
         console.log(`${this.a} + ${this.b}`);
     }
