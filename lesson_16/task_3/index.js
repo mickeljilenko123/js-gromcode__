@@ -3,26 +3,20 @@
 
 
 
-export const createArrayOfFunctions = (num) => {
+const createArrayOfFunctions = (num) => {
 
     if (typeof number !== num) {
         return null;
     }
 
-
     var arr = [];
 
     for (let i = 0; i <= num; i++) {
         arr[i] = function() {
-            return i;
+            console.log(i);
         };
     }
+    console.log(arr);
     return arr;
 }
-createArrayOfFunctions(7)[7]();
-
-
-
-if (typeof number !== num) {
-    return null;
-}
+createArrayOfFunctions(7);
