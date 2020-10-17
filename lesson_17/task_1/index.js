@@ -1,11 +1,12 @@
  const user = {
-     firstName: 'John',
-     lastName: 'Doe',
      getFullName() {
          console.log(`${this.firstName} ${this.lastName}`);
      }
  };
 
- const res = user.getFullName.bind(user);
- res();
+ const res = user.getFullName;
+ res.call({
+     firstName: 'John',
+     lastName: 'Doe',
+ });
  export { user }
