@@ -1,16 +1,15 @@
 const user = {
-    firstName: '',
-    lastName: '',
+    firstName: ' ',
+    lastName: ' ',
     getFullName() {
         return (`${this.firstName}, ${this.lastName}`)
     },
-    setFullName(n, f) {
-        this.firstName = n,
-            this.lastName = f;
+    setFullName(firstName, lastName) {
+        return (`${this.firstName = firstName} ${this.lastName = lastName}`);
     }
 };
 
-const res = user.setFullName.bind('John', 'Doe');
+const res = user.setFullName.bind(user, 'John', 'Doe');
 res();
 
 export { user }
