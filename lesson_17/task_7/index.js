@@ -1,6 +1,6 @@
 const user = {
-    firstName: ' ',
-    lastName: ' ',
+    firstName: 'Tom',
+    lastName: 'Soer',
     getFullName() {
         return (`${this.firstName}, ${this.lastName}`)
     },
