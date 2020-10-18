@@ -51,8 +51,7 @@ function getPopulation(population) {
 // ... your code here
 
 const res4 = getPopulation;
-res4.apply(country, [43000]);
-
+console.log(res4.apply(country, ['43000']));
 /* ===> 4 <=== */
 const transaction = {
     amount: 1200,
