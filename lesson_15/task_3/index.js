@@ -1,7 +1,7 @@
 // input: string
 // output: obj
 
-export const createLogger = () => {
+const createLogger = () => {
 
     let arr = [];
 
