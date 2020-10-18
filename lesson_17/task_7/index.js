@@ -5,7 +5,8 @@ const user = {
         return (`${this.firstName}, ${this.lastName}`)
     },
     setFullName(firstName, lastName) {
-        return (`${this.firstName = firstName} ${this.lastName = lastName}`);
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 };
 
