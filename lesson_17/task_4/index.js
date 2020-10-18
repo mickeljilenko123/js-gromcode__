@@ -9,8 +9,8 @@ function sayName() {
 
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя студента 
 // ... your code here
-const res = sayName;
-res.call(student);
+const res0 = sayName;
+res0.call(student);
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
 // ... your code here
 
