@@ -7,8 +7,8 @@ const event = {
     getInvitations() {
         return this.guests.filter(({ age }) => age >= 18)
             .map(({ name, email }) => ({
-                text: `Dear ${name}! ${this.message}`,
                 email,
+                text: `Dear ${name}! ${this.message}`,
             }));
     }
 };
