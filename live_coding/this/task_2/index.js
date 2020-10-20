@@ -14,13 +14,6 @@
      }
  }
 
- function sum() {
-     return a + b;
- }
- const func = calculator.sum.bind(3, 5)
- console.log(func());
-
-
 
  /*
   * Ф-ция multiplier должна быть создана на основе calculator
@@ -28,6 +21,8 @@
   * и должна принимать 2 числа и возвращать из произведение
   */
 
+ const multiplier = calculator.bind({ operation: '*' }, 4, 5);
+ console.log(multiplier());
 
 
  /*
@@ -36,10 +31,18 @@
   * и должна принимать 2 числа и возвращать из сумму
   */
  // ...your code here
-
+ const summator = calculator.bind({ operation: '+' }, 4, 5);
+ console.log(summator());
  /*
   * Ф-ция twice должна быть создана на основе calculator
   * с использования .bind
   * и должна принимать 1 число и возвращать это число умноженное на 2
   */
  // ...your code here
+
+ function twice1(n) {
+     return n * 2;
+ }
+
+ const twice = twice1.bind(5);
+ console.log(twice());
