@@ -1,29 +1,19 @@
-// export function saveCalls() {
-//     let calls = [];
-//     return function() {
-//         calls.push([...arguments]);
-//     }
-// }
+//input: func
+//output: func
 
-// function test(a, b) {
-//     return Math.sqrt(a * a + b * b);
-// }
-// const withMemory = saveCalls(test);
-// withMemory(4, 2);
-// withMemory(9, 1);
+//saveCalls(func) => func
 
-export function saveCalls() {
+function saveCalls() {
     let calls = [];
-    return function() {
+    return function withMemory() {
         calls.push([...arguments]);
     }
 }
 
-const user = {
-    name: 'John',
-    sayHi() {
-        return this.name;
-    }
-};
-const methodWithMemory = saveCalls(user.sayHi);
-methodWithMemory.apply({ name: 'Tom' }); // 'Tom'
+
+function sum(a, b) {
+    return a + b;
+}
+
+const withMemory = saveCalls(sum);
+withMemory(3, 5)
