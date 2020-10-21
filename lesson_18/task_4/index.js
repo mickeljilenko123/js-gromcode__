@@ -3,17 +3,20 @@
 
 //saveCalls(func) => func
 
-export function saveCalls() {
+function saveCalls(func) {
     let calls = [];
     return function withMemory() {
         calls.push([...arguments]);
+        console.log(calls);
+        return func.call(this);
     }
 }
 
-
-function sum(a, b) {
+const sum = (a, b) => {
     return a + b;
 }
 
 const withMemory = saveCalls(sum);
-withMemory(3, 5)
+withMemory(3, 6);
+
+export { saveCalls }
