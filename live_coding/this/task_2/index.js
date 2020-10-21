@@ -24,7 +24,7 @@ export function calculator(a, b) {
  */
 
 const multiplier = calculator.bind({ operation: '*' }, 4, 5);
-console.log(multiplier());
+// console.log(multiplier());
 
 
 /*
@@ -34,7 +34,7 @@ console.log(multiplier());
  */
 // ...your code here
 const summator = calculator.bind({ operation: '+' }, 4, 5);
-console.log(summator());
+// console.log(summator());
 /*
  * Ф-ция twice должна быть создана на основе calculator
  * с использования .bind
@@ -44,5 +44,5 @@ console.log(summator());
 
 
 const twice = calculator.bind({ operation: 'n' }, 4);
-console.log(twice());
+// console.log(twice());
 export { multiplier, summator, twice }
