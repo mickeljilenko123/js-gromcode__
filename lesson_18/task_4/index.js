@@ -6,7 +6,7 @@
 function saveCalls(func) {
     let calls = [];
     return function withMemory() {
-        this.calls.push([...arguments]);
+        calls.push([...arguments]);
         console.log(calls);
         return func.call(this);
     }
