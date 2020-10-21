@@ -20,3 +20,4 @@ const ship = {
 Object.setPrototypeOf(ship, vehicle);
 ship.move();
 ship.stop();
+export { vehicle, ship }
