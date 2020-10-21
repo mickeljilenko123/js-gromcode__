@@ -1,5 +1,4 @@
-export function calculator(a, b) {
-
+function calculator(a, b) {
     switch (this.operation) {
         case '+':
             return a + b;
@@ -12,7 +11,7 @@ export function calculator(a, b) {
         default:
             return NaN;
     }
-}
+};
 
 
 /*
@@ -20,10 +19,15 @@ export function calculator(a, b) {
  * с использования .bind
  * и должна принимать 2 числа и возвращать из произведение
  */
+// ...your code here
 
-const multiplier = calculator.bind({ operation: '*' }, 4, 5);
-console.log(multiplier());
+const getAction = {
+    operation: '*',
+};
 
+const multiplier = calculator.bind(getAction);
+
+console.log(multiplier(3, 3));
 
 /*
  * Ф-ция summator должна быть создана на основе calculator
@@ -31,8 +35,14 @@ console.log(multiplier());
  * и должна принимать 2 числа и возвращать из сумму
  */
 // ...your code here
-const summator = calculator.bind({ operation: '+' }, 4, 5);
-console.log(summator());
+
+const getAction2 = {
+    operation: '+',
+};
+
+const summator = calculator.bind(getAction2);
+console.log(summator(5, 5));
+
 /*
  * Ф-ция twice должна быть создана на основе calculator
  * с использования .bind
@@ -40,8 +50,11 @@ console.log(summator());
  */
 // ...your code here
 
+const getAction3 = {
+    operation: '*',
+};
 
-const twice = calculator.bind({ operation: '*' }, 2);
+const twice = calculator.bind(getAction3, 2);
+console.log(twice(10));
 
-console.log(twice());
-export { multiplier, summator, twice }
+export { multiplier, summator, twice };
