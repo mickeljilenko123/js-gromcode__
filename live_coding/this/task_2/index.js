@@ -9,8 +9,6 @@ export function calculator(a, b) {
             return a / b;
         case '*':
             return a * b;
-        case 'n':
-            return a * 2;
         default:
             return NaN;
     }
@@ -24,7 +22,7 @@ export function calculator(a, b) {
  */
 
 const multiplier = calculator.bind({ operation: '*' }, 4, 5);
-// console.log(multiplier());
+console.log(multiplier());
 
 
 /*
@@ -34,7 +32,7 @@ const multiplier = calculator.bind({ operation: '*' }, 4, 5);
  */
 // ...your code here
 const summator = calculator.bind({ operation: '+' }, 4, 5);
-// console.log(summator());
+console.log(summator());
 /*
  * Ф-ция twice должна быть создана на основе calculator
  * с использования .bind
@@ -43,6 +41,7 @@ const summator = calculator.bind({ operation: '+' }, 4, 5);
 // ...your code here
 
 
-const twice = calculator.bind({ operation: 'n' }, 4);
-// console.log(twice());
+const twice = calculator.bind({ operation: '*' }, 2);
+
+console.log(twice());
 export { multiplier, summator, twice }
