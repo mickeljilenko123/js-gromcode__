@@ -3,7 +3,7 @@
 
 //saveCalls(func) => func
 
-function saveCalls() {
+export function saveCalls() {
     let calls = [];
     return function withMemory() {
         calls.push([...arguments]);
