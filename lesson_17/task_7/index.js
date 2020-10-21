@@ -1,16 +1,16 @@
 const user = {
-
+    firstName: 'John',
+    lastName: 'Doe',
     getFullName() {
         return (`${this.firstName} ${this.lastName}`)
     },
-    setFullName(f, l) {
-        this.firstName = f;
-        this.lastName = l;
+    setFullName(getFullName) {
+        let fn = getFullName.split(" ");
+        this.firstName = fn[0];
+        this.lastName = fn[1];
     },
 
 };
 
-const res = user.setFullName.bind(user, 'John', 'Doe');
-res();
-console.log(user.getFullName());
+// console.log(user.getFullName());
 export { user }
