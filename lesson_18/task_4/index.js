@@ -5,11 +5,12 @@
 
 function saveCalls(func) {
     // let calls = [];
-    withMemory.calls = [];
-    return function withMemory() {
+    function withMemory() {
         withMemory.calls.push([...arguments]);
         return func.call(this);
     }
+    withMemory.calls = [];
+    return withMemory;
 }
 
 // const sum = (a, b) => {
