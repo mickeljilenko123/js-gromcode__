@@ -10,6 +10,5 @@ const user = {
 
 const res = user.setFullName.bind(user, 'John', 'Doe');
 res();
-user.getFullName();
-
+// console.log(user.getFullName());
 export { user }
