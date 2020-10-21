@@ -4,10 +4,9 @@
 //saveCalls(func) => func
 
 function saveCalls(func) {
-    let calls = [];
     return function withMemory() {
+        let calls = [];
         calls.push([...arguments]);
-        console.log(calls);
         return func.call(this);
     }
 }
