@@ -4,7 +4,7 @@ class User {
         this.age = age;
     }
     static createEmpty() {
-        return new User(' ', null);
+        return new User('', null);
     }
     sayHi() {
         console.log(`Hi, I am ${this.name}`);
