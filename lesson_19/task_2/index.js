@@ -7,4 +7,4 @@ const getOwnProps = (obj) => {
     return Object.keys(obj);
 }
 console.log(getOwnProps(obj));
-// export { getOwnProps }
+export { getOwnProps }
