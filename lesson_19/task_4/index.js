@@ -1,4 +1,4 @@
-const obj = {
+const user = {
     firstName: 'John',
     lastName: 'Doe',
     get fullName() {
@@ -10,6 +10,6 @@ const obj = {
         this.lastName = lastName;
     }
 };
-obj.fullName = 'Tom Hardy';
+user.fullName = 'Tom Hardy';
 console.log(obj.firstName);
-export default { obj }
+export default { user }
