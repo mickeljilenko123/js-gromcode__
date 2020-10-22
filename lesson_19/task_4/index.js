@@ -12,4 +12,4 @@ const user = {
 };
 // user.fullName = 'Tom Hardy';
 // console.log(user.firstName);
-export default { user }
+export default user
