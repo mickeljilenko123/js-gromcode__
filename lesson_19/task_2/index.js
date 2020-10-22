@@ -3,8 +3,13 @@ const obj1 = {
     age: 29,
 };
 
-const getOwnProps = (obj) => {
-    return Object.keys(obj);
-}
+function getOwnProps(obj) {
 
+    for (let prop in obj) {
+        if (obj.hasOwnProperty(prop)) {
+            return [prop];
+        };
+    };
+};
+console.log(getOwnProps(obj1));
 export { getOwnProps }
