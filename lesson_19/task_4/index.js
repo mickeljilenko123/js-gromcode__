@@ -11,5 +11,5 @@ const user = {
     }
 };
 user.fullName = 'Tom Hardy';
-console.log(obj.firstName);
+console.log(user.firstName);
 export default { user }
