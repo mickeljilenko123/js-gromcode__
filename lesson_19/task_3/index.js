@@ -12,6 +12,9 @@ export function User(name, age) {
         if (this.age >= 25) {
             return age;
         };
+        if (this.age < 0) {
+            return false;
+        };
     };
 };
 const user1 = new User('John', 29);
