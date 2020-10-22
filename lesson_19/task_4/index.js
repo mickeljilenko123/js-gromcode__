@@ -10,6 +10,6 @@ const user = {
         this.lastName = lastName;
     }
 };
-user.fullName = 'Tom Hardy';
-console.log(user.firstName);
+// user.fullName = 'Tom Hardy';
+// console.log(user.firstName);
 export default { user }
