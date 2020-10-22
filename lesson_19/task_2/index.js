@@ -9,5 +9,5 @@ const obj1 = {
 const getOwnProps = (obj) => {
     return Object.keys(obj);
 }
-console.log(getOwnProps(obj1));
-// export { getOwnProps }
+
+export { getOwnProps }
