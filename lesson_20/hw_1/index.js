@@ -22,12 +22,10 @@ class Order {
         }
     }
     isValidType(Buy, Sell) {
-        if (Buy) {
+        if (Buy || Sell) {
             return true;
         }
-        if (Sell) {
-            return false;
-        }
+        return false;
     }
 }
 export { Order }
