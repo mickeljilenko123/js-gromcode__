@@ -22,7 +22,7 @@ class Order {
         }
     }
     isValidType(Buy, Sell) {
-        if (Buy && Sell) {
+        if (this.type = Buy && Sell) {
             return true;
         }
         return false;
