@@ -21,11 +21,11 @@ class Order {
             return;
         }
     }
-    isValidType() {
-        if (this.Buy) {
+    isValidType(Buy, Sell) {
+        if (Buy) {
             return true;
         }
-        if (this.Sell) {
+        if (Sell) {
             return false;
         }
     }
