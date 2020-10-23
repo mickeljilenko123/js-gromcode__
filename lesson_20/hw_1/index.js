@@ -30,3 +30,4 @@ class Order {
         }
     }
 }
+export { Order }
