@@ -22,10 +22,10 @@ class Order {
         }
     }
     isValidType() {
-        if (Buy) {
+        if (this.Buy) {
             return true;
         }
-        if (Sell) {
+        if (this.Sell) {
             return false;
         }
     }
