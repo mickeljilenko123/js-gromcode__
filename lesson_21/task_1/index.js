@@ -7,24 +7,29 @@ const tasks = [
 ];
 
 //1. Отрисовка файлаrenderListElem
-const renderListElem = listItems => {
-    const listElem = document.querySelector('.list');
+const renderListItem = listItems => {
+    const listElement = document.querySelector('.list');
 
-    const listItemsElems = listItems
+    const listItemsElements = listItems
         .sort((a, b) => a.done - b.done)
-        .map(({ text, done }) => {
-            const listItemElem = document.createElement('li');
-            listItemElem.classList.add('list_item');
+        .map(({
+            text,
+            done
+        }) => {
+            const listItemElement = document.createElement('li');
+            listItemElement.classList.add('list__item');
             if (done) {
-                listItemElem.classList.add('list_item_done');
+                listItemElement.classList.add('list__item_done');
             }
-            const checkboxElem = document.createElement('input');
-            checkboxElem.setAttribute('type', 'checkbox');
-            checkboxElem.checked = done;
-            checkboxElem.classList.add('list_item-checkbox');
-            listItemElem.append(checkboxElem, text);
-            return listItemsElems;
-        });
-    listElem.append(...listItemsElems);
+            const checkboxElement = document.createElement('input');
+            checkboxElement.setAttribute('type', 'checkbox');
+            checkboxElement.checked = done;
+            checkboxElement.classList.add('list__item-checkbox');
+            listItemElement.append(checkboxElement, text);
+
+            return listItemElement;
+        })
+    listElement.append(...listItemsElements);
 };
-renderListElem(tasks);
+
+console.log(renderListItem(tasks));
