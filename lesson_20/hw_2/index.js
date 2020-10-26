@@ -9,19 +9,52 @@ class User {
     }
 }
 
+// const user = new User('1', 'Tom', 'session-id');
+// console.log(user.id); // '1'
+// console.log(user.name); // 'Tom'
+// console.log(user.sessionId); // 'session-id'
+
+// user.name = 'Bob'; 
+// console.log(user.name); 
+
 class UserRepository {
     constructor(users) {
-        this.Object.freeze(users) = users;
-    }
-    get fullUsers() {
-        return (`${this.Object.freeze(users)}`)
-    }
-    getUserNames(users) {
-        return this.Object.freeze(users);
-    }
-    getUserIds() {
-        return this.Object.freeze(users['id']);
+        // super(id, name, sessionId, users)
+        this._users = Object.freeze(users);
     }
 
-}
-export { User, UserRepository }
+    get users() {
+        return this._users;
+    }
+
+    getUserNames() {
+        return this._users.map(pers => pers._name);
+    }
+
+    getUserIds() {
+        return this._users.map(pers => pers._id);
+    }
+
+    getUserNameById(id) {
+        for (let pers of this._users) {
+            console.log(this._users)
+            if (pers.id === id) {
+                console.log(pers)
+                return pers.name;
+            }
+        }
+    }
+};
+
+const usersArr = new User(`${Math.random()}`, 'Leon', '12345');
+
+console.log(usersArr);
+
+const getUsersData = new UserRepository(['Lynn', 'Freddy', 'Mark', 'Spiderman']);
+
+console.log(getUsersData);
+console.log(getUsersData.getUserNames());
+console.log(getUsersData.getUserIds());
+console.log(getUsersData.getUserNameById());
+
+export { User, UserRepository };
