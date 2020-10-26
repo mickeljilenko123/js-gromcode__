@@ -1,24 +1,20 @@
 const getTitle = () => {
-    const title = document.querySelector('.title');
-    return title.textContent;
+    return document.querySelector('.title').textContent;
 }
 getTitle();
 
 const getDescription = () => {
-    const about = document.querySelector('.about');
-    return about.innerText;
+    return document.querySelector('.about').innerText;
 }
 getDescription();
 
 const getPlans = () => {
-    const plans = document.querySelector('.plans');
-    return plans.innerHTML;
+    return document.querySelector('.plans').innerHTML;
 }
 getPlans();
 
 const getGoal = () => {
-    const goal = document.querySelector('.goal');
-    return goal.outerHTML;
+    return document.querySelector('.goal').outerHTML;
 }
 getGoal();
 
