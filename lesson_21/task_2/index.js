@@ -6,3 +6,4 @@ const getInputElement = () => {
     const inputElem = document.querySelector('text');
     console.dir(inputElem)
 }
+export { getTitleElement, getInputElement }
