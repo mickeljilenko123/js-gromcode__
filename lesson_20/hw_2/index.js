@@ -1,21 +1,21 @@
 class User {
     constructor(id, name, sessionId) {
-        this.id = id;
-        this.name = name;
-        this.sessionId = sessionId;
+        this._id = id;
+        this._name = name;
+        this._sessionId = sessionId;
     }
-    get fullInfo() {
-        return (`${this.id} ${this.name} ${this.sessionId}`);
+    get id() {
+        return this._id;
     }
-}
 
-// const user = new User('1', 'Tom', 'session-id');
-// console.log(user.id); // '1'
-// console.log(user.name); // 'Tom'
-// console.log(user.sessionId); // 'session-id'
+    get name() {
+        return this._name;
+    }
 
-// user.name = 'Bob'; 
-// console.log(user.name); 
+    get sessionId() {
+        return this._sessionId;
+    }
+};
 
 class UserRepository {
     constructor(users) {
