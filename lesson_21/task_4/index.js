@@ -10,10 +10,16 @@ const getDescription = () => {
 }
 getDescription();
 
+const getPlans = () => {
+    const about = document.querySelector('.plans');
+    return about.innerHTML;
+}
+getPlans();
+
 const getGoal = () => {
     const goal = document.querySelector('.goal');
     return goal.outerHTML;
 }
 getGoal();
 
-export { getTitle, getDescription, getGoal }
+export { getTitle, getDescription, getPlans, getGoal }
