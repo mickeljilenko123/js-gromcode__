@@ -1,5 +1,5 @@
 const clearList = () => {
-    const clearList1 = document.querySelector('.categories');
-    clearList1.innerHTML = '';
+    const getClearList = document.querySelector('.categories');
+    getClearList.innerHTML = '';
 }
 export { clearList }
