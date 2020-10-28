@@ -8,7 +8,8 @@ const finishForm = () => {
     elem.setAttribute('type', 'text');
     elem.setAttribute('name', 'login');
 
-    getFinishForm.prepend(elem);
+    getFinishForm.append(elem);
     console.log(getFinishForm);
 }
 finishForm();
+export { finishForm }
