@@ -7,4 +7,4 @@ const setButton = buttonText => {
 }
 setButton('button text');
 
-export { setButton }
+// export { setButton }
