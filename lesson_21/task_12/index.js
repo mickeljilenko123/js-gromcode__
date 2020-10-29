@@ -6,4 +6,4 @@ const squaredNumbers = () => {
     })
 }
 squaredNumbers();
-// export { squaredNumbers }
+export { squaredNumbers }
