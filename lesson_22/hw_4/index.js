@@ -1,5 +1,5 @@
 const buttonElem = document.querySelector('.search__btn');
-buttonElem.addEventListener('change', () => {
+buttonElem.addEventListener('click', () => {
     const elem = document.querySelector('.search__input');
-    console.log(elem.textContent);
+    console.log(elem.value);
 });
