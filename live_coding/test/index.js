@@ -1,9 +1,9 @@
 const str = 'hello world';
 const getStr = arr => {
     let arr1 = arr.split('');
-    console.log(arr1);
-    arr1.reduce(e => {
-
-    }, 0)
+    const arr4 = arr1.reduce((acc, e) => {
+        return e + acc;
+    }, );
+    return arr4;
 }
-getStr(str);
+console.log(getStr(str));
