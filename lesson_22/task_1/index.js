@@ -114,4 +114,4 @@ attachBtn.addEventListener('click', attacher);
 removeBtn.addEventListener('click', remover);
 
 attacher();
-// remover();
+remover();
