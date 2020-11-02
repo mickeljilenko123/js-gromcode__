@@ -1,5 +1,9 @@
-const getElemBtn = document.querySelector('.btn');
-const handleClick = (event) => {
+const getElemBtn = document.querySelectorAll('.btn');
+
+
+const handleClick = event => {
     console.log(event.target.textContent);
 }
-getElemBtn.addEventListener('click', handleClick)
+getElemBtn.forEach(e => {
+    e.addEventListener('click', handleClick)
+});
