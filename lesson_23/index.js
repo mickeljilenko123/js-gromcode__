@@ -1,46 +1,53 @@
 const emailInputElem = document.querySelector('#email');
 const passwordInputElem = document.querySelector('#password');
 
-const errorTextEmail = document.querySelector('.error-text_email');
-const passwordTextEmail = document.querySelector('.error-text_password');
+const emailErrorElem = document.querySelector('.error-text_email');
+const passwordErrorElem = document.querySelector('.error-text_password');
 
-//Проверка на пустое поле
-const isRequared = value => value ?
+const isRequired = value => value ?
     undefined :
-    'Requared';
+    'Required';
 
 const isEmail = value => value.includes('@') ?
     undefined :
     'Should be an email';
 
-const validators = {
-    email: [isRequared, isEmail],
-    password: [isRequared],
-}
+const validatorsByField = {
+    email: [isRequired, isEmail],
+    password: [isRequired],
+};
+
 const validate = (fieldName, value) => {
-    const validatorsCurrent = validators[fieldName];
-    return validatorsCurrent
+    const validators = validatorsByField[fieldName];
+    return validators
         .map(validator => validator(value))
         .filter(errorText => errorText)
         .join(', ');
 };
+
 const onEmailChange = event => {
-    const error = validate('email', event.target.value)
-    errorTextEmail.textContent = error
+    const errorText = validate('email', event.target.value);
+    emailErrorElem.textContent = errorText;
 };
 
 const onPasswordChange = event => {
-    const error = validate('password', event.target.value)
-    passwordTextEmail.textContent = error
+    const errorText = validate('password', event.target.value);
+    passwordErrorElem.textContent = errorText;
 };
-emailInputElem.addEventListener('change', onEmailChange);
+
+emailInputElem.addEventListener('input', onEmailChange);
 passwordInputElem.addEventListener('input', onPasswordChange);
 
 const formElem = document.querySelector('.login-form');
+
 const onFormSubmit = event => {
     event.preventDefault();
-    const formData = [...new FormData()]
-        .reduce((acc, [field, value]) => ({...acc, [field]: value }), {});
+    const formData = [...new FormData(formElem)]
+        .reduce((acc, [field, value]) => ({
+            ...acc,
+            [field]: value
+        }), {});
     alert(JSON.stringify(formData));
-}
-formElem.addEventListener('submit', onFormSubmit)
+};
+
+formElem.addEventListener('submit', onFormSubmit);
