@@ -66,13 +66,15 @@ const createButton = document.querySelector(".create-task-btn");
 //добавляем новое задание после ввода в поле и нажатия на кнопку Create
 const addTask = () => {
     //если поле пустое - не добавляем задачу
-    if (inputEl.value === "")
-        tasks.push({
-            //добавляем в элемент новый id относительно длины списка
-            id: Number(`${tasks.length + 1}`),
-            text: inputEl.value,
-            done: false,
-        });
+    if (inputEl.value === "") {
+        return;
+    }
+    tasks.push({
+        //добавляем в элемент новый id относительно длины списка
+        id: Number(`${tasks.length + 1}`),
+        text: inputEl.value,
+        done: false,
+    });
     //в консоли поставить дебаггер и проверить добавление нового элемента в массив tasks
     inputEl.value = "";
     renderListItems(tasks);
