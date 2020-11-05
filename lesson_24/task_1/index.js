@@ -8,3 +8,4 @@ const dayOfWeek = (date, days) => {
 }
 const res = dayOfWeek(new Date(2019, 0, 1), 12);
 console.log(res);
+export { dayOfWeek }
