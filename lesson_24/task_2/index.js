@@ -7,3 +7,4 @@ const formatter = new Intl.DateTimeFormat('en', {
 
 const getGreenwichTime = date => formatter.format(date);
 console.log(getGreenwichTime(new Date()));
+export { getGreenwichTime }
