@@ -6,7 +6,7 @@ const tasks = [
     { id: 5, text: 'Buy meat', done: true },
 ];
 
-//выбор листа в котором создаём элементы "li"
+// выбор листа в котором создаём элементы "li"
 const listElement = document.querySelector(".list");
 
 const renderListItems = listItems => {
@@ -43,7 +43,7 @@ const renderListItems = listItems => {
 };
 renderListItems(tasks);
 
-//при клике на checkbox изменить состояние элемента
+
 const elementStatus = event => {
     const checkboxChecked = event.target.classList.contains(
         "list__item-checkbox"
@@ -61,23 +61,18 @@ const elementStatus = event => {
 };
 listElement.addEventListener("click", elementStatus);
 
-const inputEl = document.querySelector(".task-input");
-const createButton = document.querySelector(".create-task-btn");
-//добавляем новое задание после ввода в поле и нажатия на кнопку Create
-const addTask = () => {
-    //если поле пустое - не добавляем задачу
-    if (inputEl.value === "") {
-        return;
-    }
+const buttonElem = document.querySelector('.create-task-btn');
+const inputElem = document.querySelector('.task-input');
+
+
+const addClick = () => {
+    if (inputElem.value === '') return;
     tasks.push({
-        //добавляем в элемент новый id относительно длины списка
         id: Number(`${tasks.length + 1}`),
-        text: inputEl.value,
+        text: inputElem.value,
         done: false,
     });
-    //в консоли поставить дебаггер и проверить добавление нового элемента в массив tasks
-    inputEl.value = "";
+    inputElem.value = '';
     renderListItems(tasks);
 };
-
-createButton.addEventListener("click", addTask);
+buttonElem.addEventListener('click', addClick)
