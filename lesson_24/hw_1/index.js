@@ -1,14 +1,18 @@
 const getDiff = (startDate, endDate) => {
-    let getNewDate = new Date(endDate - startDate);
+    let getNewDate = new Date(startDate - endDate);
 
-    // if (startDate < endDate) {
-    //     return getNewDate = new Date(endDate - startDate);
-    // }
+    if (startDate < endDate)
+        getNewDate = new Date(endDate) - new Date(startDate);
 
-    let newDay = getNewDate.getDate();
-    let newHour = getNewDate.getHours();
-    let newMin = getNewDate.getMinutes();
-    let newSec = getNewDate.getSeconds();
+    const newDay = parseInt(getNewDate / (1000 * 60 * 60 * 24));
+    const newHour = parseInt((getNewDate / (1000 * 60 * 60)) % 24);
+    const newMin = parseInt((getNewDate / (1000 * 60)) % 60);
+    const newSec = parseInt((getNewDate / 1000) % 60);
+
+    // let newDay = getNewDate.getDate();
+    // let newHour = getNewDate.getHours();
+    // let newMin = getNewDate.getMinutes();
+    // let newSec = getNewDate.getSeconds();
     return `${newDay}d ${newHour}h ${newMin}m ${newSec}s`;
 }
 
