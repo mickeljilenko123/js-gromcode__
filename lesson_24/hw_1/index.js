@@ -12,6 +12,6 @@ const getDiff = (startDate, endDate) => {
     return `${newDay}d ${newHour}h ${newMin}m ${newSec}s`;
 }
 
-const res = getDiff(new Date(), 2022, 6, 30, 15);
+const res = getDiff(new Date(2019, 6, 30, 15), 2022, 5, 10, 5);
 console.log(res);
 export { getDiff }
