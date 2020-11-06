@@ -14,3 +14,4 @@ const getDiff = (startDate, endDate) => {
 
 const res = getDiff(new Date(2019, 2, 26, 6), 2022, 6, 30, 15);
 console.log(res);
+export { getDiff }
