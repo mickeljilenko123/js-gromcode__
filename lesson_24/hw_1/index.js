@@ -1,9 +1,9 @@
 const getDiff = (startDate, endDate) => {
     let getNewDate = new Date(startDate - endDate);
 
-    if (startDate < endDate) {
-        return getNewDate = new Date(endDate - startDate);
-    }
+    // if (startDate < endDate) {
+    //     return getNewDate = new Date(endDate - startDate);
+    // }
 
     let newDay = getNewDate.getDate();
     let newHour = getNewDate.getHours();
