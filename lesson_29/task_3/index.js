@@ -9,4 +9,4 @@ const printing = () => {
     }, 0);
     console.log(3);
 }
-printing();
+export { printing }
