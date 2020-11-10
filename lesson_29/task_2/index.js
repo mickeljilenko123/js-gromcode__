@@ -14,3 +14,4 @@ const pinger = (num, pingers) => {
     // }, num * pingers);
 };
 pinger(5, 1000);
+export { pinger }
