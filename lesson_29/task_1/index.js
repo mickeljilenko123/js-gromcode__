@@ -1,26 +1,25 @@
 const addImage = (imgSrc, callback) => {
-    // Создаем ел картинки
-    const elemImage = document.createElement('img');
-    elemImage.setAttribute('alt', 'My photo');
-
-    elemImage.src = imgSrc;
+    const imgElem = document.createElement('img');
+    imgElem.setAttribute('alt', 'My Photo');
+    imgElem.src = imgSrc;
 
     const containerElem = document.querySelector('.page');
-    containerElem.append(elemImage);
+    containerElem.append(imgElem);
 
     const onImageLoaded = () => {
-        const { width, height } = elemImage;
+        const { width, height } = imgElem;
+        // console.log(imgElem);
+
         callback(null, { width, height });
-    }
-    elemImage.addEventListener('loaded', onImageLoaded);
-    elemImage.addEventListener('error', () => callback('Image load failed'));
+    };
 
+    imgElem.addEventListener('load', onImageLoaded);
 
-    //TODO write your code here
-
+    imgElem.addEventListener('error', () => callback('Image load failed'))
 };
 
-//callack example
+// const imgSrc = 'https://server.com/image.png';
+
 const onImageLoaded = (error, data) => {
     if (error) {
         console.log(error);
@@ -28,9 +27,9 @@ const onImageLoaded = (error, data) => {
     }
     const { width, height } = data;
     const sizeElem = document.querySelector('.image-size');
-    sizeElem.textContent = `${width} x ${height}`;
-}
+    sizeElem.textContent = `${width}: x ${height}`;
+};
 
-//test call
-addImage("https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg", onImageLoaded);
-export { addImage }
+// addImage(imgSrc, onImageLoaded);
+
+export { addImage };
