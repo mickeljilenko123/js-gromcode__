@@ -2,7 +2,7 @@ const pinger = (num, pingers) => {
     let i = num;
     const interval = setInterval(() => {
         if (i-- > 0) {
-            console.log('ping');
+            console.log('Ping');
         } else {
             clearInterval(interval);
         }
