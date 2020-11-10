@@ -13,5 +13,5 @@ const pinger = (num, pingers) => {
     //     clearInterval(interval);
     // }, num * pingers);
 };
-pinger(5, 1000);
+//pinger(5, 1000);
 export { pinger }
