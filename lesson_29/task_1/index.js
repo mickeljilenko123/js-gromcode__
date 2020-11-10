@@ -1,35 +1,44 @@
-const addImage = (imgSrc, callback) => {
-    const imgElem = document.createElement('img');
-    imgElem.setAttribute('alt', 'My Photo');
+"use strict";
+export const addImage = (imgSrc, callback) => {
+    //создаём елемент картинки
+    const imgElem = document.createElement("img");
+    //указываем правильный путь для картинки
     imgElem.src = imgSrc;
-
-    const containerElem = document.querySelector('.page');
-    containerElem.append(imgElem);
-
+    //назначаем атрибуты
+    imgElem.setAttribute("alt", "My Photo");
+    //методом append добавляем картинку в элемент ".page"
+    const containerElement = document.querySelector(".page");
+    containerElement.append(imgElem);
+    //описываем функцию onImageLoaded 222
     const onImageLoaded = () => {
-        const { width, height } = imgElem;
-        // console.log(imgElem);
-
-        callback(null, { width, height });
+        callback(null, imgElem);
     };
+    //подписываемся на событие загрузки картинки 1111
+    imgElem.addEventListener("load", onImageLoaded);
 
-    imgElem.addEventListener('load', onImageLoaded);
+    //сообщение об ошибке
+    imgElem.addEventListener("error", () => callback("Image load is failed..."));
 
-    imgElem.addEventListener('error', () => callback('Image load failed'))
+    // console.log({ width, height });
 };
 
-// const imgSrc = 'https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg';
+// const imgSrc =
+//   "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg";
 
-const onImageLoaded = (error, data) => {
+//callack example
+const onImageLoaded = (error, imgElem) => {
     if (error) {
         console.log(error);
         return;
     }
-    const { width, height } = data;
-    const sizeElem = document.querySelector('.image-size');
-    sizeElem.textContent = `${width}: x ${height}`;
+    const { width, height } = imgElem;
+    const sizeElem = document.querySelector(".image-size");
+    sizeElem.textContent = `${width} x ${height}`;
 };
 
-// addImage(imgSrc, onImageLoaded);
-
-export { addImage };
+//test call
+// addImage(
+//   "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg",
+//   onImageLoaded
+// );
+//картинка загружается асинхронно!!!!
