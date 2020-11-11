@@ -25,7 +25,7 @@ successPromise
  */
 successPromise
     .then(number => {
-        const halfNumber = number * 10;
+        const halfNumber = number * 2 + 256;
         return halfNumber;
     })
     .then(result => {
