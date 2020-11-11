@@ -21,3 +21,4 @@ const requestUserData = (userId) => {
 requestUserData('userid777')
     .then(data => console.log(data))
     .catch(error => console.log(error))
+export { requestUserData }
