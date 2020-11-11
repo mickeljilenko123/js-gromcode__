@@ -12,11 +12,12 @@ const asyncCalculator = numbr =>
             resolve(result)
         }, 5000)
     }))
-    .then(value => {
-        const result = value * 2;
-        console.log(`Doubled value: ${result}`);
-        return result;
-    })
-asyncCalculator(5)
-    .then(value => console.log(value))
+    .then(value =>
+        new Promise((resolve) => {
+            const result = value * 2;
+            console.log(`Doubled value: ${result}`);
+            resolve(result);
+        }))
+asyncCalculator(5);
+
 export { asyncCalculator }
