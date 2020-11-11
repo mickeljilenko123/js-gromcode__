@@ -10,3 +10,4 @@ const delay = str => {
     return p;
 }
 delay('Done')
+export { delay }
