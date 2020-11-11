@@ -9,14 +9,14 @@ const asyncCalculator = numbr =>
         setTimeout(() => {
             const result = value * value;
             console.log(`Squared value: ${result}`);
-            resolve(result)
+            return resolve(result)
         }, 5000)
     }))
     .then(value =>
         new Promise((resolve) => {
             const result = value * 2;
             console.log(`Doubled value: ${result}`);
-            resolve(result);
+            return resolve(result);
         }))
 asyncCalculator(5);
 
