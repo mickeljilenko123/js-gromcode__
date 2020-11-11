@@ -19,3 +19,4 @@ const asyncCalculator = numbr =>
     })
 asyncCalculator(5)
     .then(value => console.log(value))
+export { asyncCalculator }
