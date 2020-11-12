@@ -2,12 +2,10 @@
  * ф-ция makePromise должна вернуть промис со значением переданным в ф-цию
  */
 
-export const makePromise = num => {
-        return new Promise(resolve => {
-            resolve(num);
-        })
-    }
-    // const makePromise = Promise.resolve(num);
+const makePromise = num =>
+    Promise.resolve(num);
+
+// const makePromise = Promise.resolve(num);
 
 /*
  * пример использования
