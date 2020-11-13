@@ -10,6 +10,7 @@ export const resultPromise =
     Promise.all([promiseNumber1, promiseNumber2, promiseNumber3])
 
 
+
 resultPromise
     .then(numbersList => {
         console.log(numbersList);
