@@ -44,7 +44,8 @@ const onFormClick = event => {
     event.preventDefault();
 
     const getFormData = [...new FormData(formData)]
-        .reduce((acc, [name, value]) => ({...acc, [name]: value }), {});
+        .reduce((acc, [name, value]) =>
+            ({...acc, [name]: value }), {});
     alert(JSON.stringify(getFormData));
 };
 formData.addEventListener('submit', onFormClick);
