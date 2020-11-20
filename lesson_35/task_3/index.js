@@ -17,8 +17,8 @@ const userNameInputElem = document.querySelector(".name-form__input");
 
 
 const onSearchUser = () => {
-    showSpinner();
     cleanReposList();
+    showSpinner();
     const userName = userNameInputElem.value;
     console.log(userName);
     //Запрашиваем данные в пользователя
@@ -40,7 +40,7 @@ const onSearchUser = () => {
         })
         .finally(() => {
             hideSpinner();
-        })
+        });
 
 };
 
