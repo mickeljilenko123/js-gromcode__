@@ -16,7 +16,7 @@ const showUserBtnElem = document.querySelector(".name-form__btn");
 const userNameInputElem = document.querySelector(".name-form__input");
 
 
-const onSearchUser = () => {
+const onSearchUser = async() => {
     cleanReposList();
     showSpinner();
     const userName = userNameInputElem.value;
