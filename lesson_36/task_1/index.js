@@ -7,10 +7,10 @@ export const fetchUser = async userId => {
         const userData = await response.json();
         return userData;
     } catch (err) {
-        throw new Error('Failed');
+        throw new Error("Failed to fetch user");
     }
 
 }
-fetchUser('facebook')
-    .then(userData => console.log(userData))
-    .catch(err => console.log(err.message));
+fetchUser('facebook');
+// .then(userData => console.log(userData))
+// .catch(err => console.log(err.message));
