@@ -19,33 +19,52 @@
 //         .then(res => res.blog)
 //         .then(e => e)
 // }
-export const getUserId = async(userId) => {
+// export const getUserId = async(userId) => {
+//     try {
+//         const response = await fetch(`https://api.github.com/users/${userId}`)
+//         if (!response.ok) {
+//             return null;
+//         }
+//         const res = await response.json();
+//         const e = await res.blog;
+//         return e;
+//     } catch (err) {
+//         throw new Error('Failed to fetch user')
+//     }
+// }
+// getUserId()
+//     .catch(err => console.log(err.message))
+
+// export const getUsersBlogs = arr => {
+//     const res = arr.map(e => getUserId(e));
+//     Promise.all(res)
+
+//     console.log(res);
+//     return res;
+// }
+
+// getUsersBlogs(['google', 'facebook', 'gaearon']);
+
+export const getUsersBlogs = async(usersBlogs) => {
     try {
-        const response = await fetch(`https://api.github.com/users/${userId}`)
-        if (!response.ok) {
-            return null;
-        }
-        const res = await response.json();
-        const e = await res.blog;
-        return e;
-    } catch (err) {
-        throw new Error('Failed to fetch user')
+        const getUsersData = await usersBlogs.map(
+            (userId) =>
+            fetch(`https://api.github.com/users/${userId}`)
+            .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error("Failed to fetch user");
+            })
+            .then((users) => users.blog)
+        );
+
+        const userData = Promise.all(getUsersData);
+        return userData;
+    } catch (error) {
+        throw new Error(error);
     }
-}
-getUserId()
-    .catch(err => console.log(err.message))
+};
 
-export const getUsersBlogs = arr => {
-    const res = arr.map(e => getUserId(e));
-    Promise.all(res).then(e => {
-        console.log(e);
-    })
-    return res;
-}
-
-getUsersBlogs(['google', 'facebook', 'gaearon']);
-
-
-// Promise.all(['google', 'facebook', 'gaearon']).then(values => {
-//     console.log(values);
-// });
+getUsersBlogs(["google", "facebook", "gaearon"])
+    .then((linksList) => console.log(linksList));
