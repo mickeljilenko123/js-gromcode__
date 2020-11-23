@@ -37,7 +37,9 @@ export const getUsersBlogs = arr => {
     arr.forEach(e => {
         return res.push(getUserId(e));
     });
-    console.log(res);
+    Promise.all(res).then(e => {
+        console.log(e);
+    })
     return res;
 }
 
