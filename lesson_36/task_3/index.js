@@ -29,10 +29,11 @@ export const getUserId = async(userId) => {
         const e = await res.blog;
         return e;
     } catch (err) {
-        throw new Error("Failed to fetch user")
+        throw new Error('Failed to fetch user')
     }
-
 }
+getUserId()
+    .catch(err => console.log(err.message))
 
 export const getUsersBlogs = arr => {
     const res = arr.map(e => getUserId(e));
