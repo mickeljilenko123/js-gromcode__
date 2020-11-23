@@ -11,6 +11,6 @@ export const fetchUser = async userId => {
     }
 
 }
-fetchUser('facebook');
-// .then(userData => console.log(userData))
-// .catch(err => console.log(err.message));
+fetchUser('f446vb')
+    .then(userData => console.log(userData))
+    .catch(err => console.log(err.message));

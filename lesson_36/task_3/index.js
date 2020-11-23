@@ -22,6 +22,9 @@
 export const getUserId = async(userId) => {
     try {
         const response = await fetch(`https://api.github.com/users/${userId}`)
+        if (!response.ok) {
+            return null;
+        }
         const res = await response.json();
         const e = await res.blog;
         return e;
@@ -31,12 +34,8 @@ export const getUserId = async(userId) => {
 
 }
 
-
 export const getUsersBlogs = arr => {
-    const res = [];
-    arr.forEach(e => {
-        return res.push(getUserId(e));
-    });
+    const res = arr.map(e => getUserId(e));
     Promise.all(res).then(e => {
         console.log(e);
     })
