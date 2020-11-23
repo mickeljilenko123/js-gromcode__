@@ -19,7 +19,7 @@
 //         .then(res => res.blog)
 //         .then(e => e)
 // }
-const getUserId = async(userId) => {
+export const getUserId = async(userId) => {
     try {
         const response = await fetch(`https://api.github.com/users/${userId}`)
         const res = await response.json();
@@ -32,7 +32,7 @@ const getUserId = async(userId) => {
 }
 
 
-const getUsersBlogs = arr => {
+export const getUsersBlogs = arr => {
     const res = [];
     arr.forEach(e => {
         return res.push(getUserId(e));
