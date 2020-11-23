@@ -59,8 +59,9 @@ export const getUsersBlogs = async(usersBlogs) => {
             .then((users) => users.blog)
         );
 
-        Promise.all(getUserId)
-            .then(res => console.log(res))
+        const res = Promise.all(getUserId);
+        return res;
+
 
     } catch (error) {
         throw new Error(error);
@@ -68,3 +69,4 @@ export const getUsersBlogs = async(usersBlogs) => {
 };
 
 getUsersBlogs(["google", "facebook", "gaearon"])
+    .then(resList => console.log(resList))
