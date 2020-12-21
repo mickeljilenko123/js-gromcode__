@@ -20,7 +20,6 @@ const renderListItems = (listItems) => {
             if (done) {
                 listItemElem.classList.add("list__item_done");
             }
-
             //добавляем каждому элементу checkbox
             const checkbox = document.createElement("input");
             //в checkbox назначаем класс

@@ -1,35 +1,59 @@
 const tasks = [
-    { text: 'Buy milk', done: false },
-    { text: 'Pick up Tom from airport', done: false },
-    { text: 'Visit party', done: false },
-    { text: 'Visit doctor', done: true },
-    { text: 'Buy meat', done: true },
+    { id: 1, text: "Buy milk", done: false },
+    { id: 2, text: "Pick up Tom from airport", done: false },
+    { id: 3, text: "Visit party", done: false },
+    { id: 4, text: "Visit doctor", done: true },
+    { id: 5, text: "Buy meat", done: true },
 ];
 
-//1. Отрисовка файлаrenderListElem
-const renderListItem = listItems => {
+//1. Создаем функцию для отрисовки
+//2. Функция принимает массив
+//3. Находим файл в который будет отрисовываться наши ел.
+//4. Созадем ел в который будет отрисовка каждого елем
+const renderListItem = (listItems) => {
     const listElement = document.querySelector('.list');
 
-    const listItemsElements = listItems
+    const arrList = listItems
         .sort((a, b) => a.done - b.done)
-        .map(({
-            text,
-            done
-        }) => {
-            const listItemElement = document.createElement('li');
-            listItemElement.classList.add('list__item');
-            if (done) {
-                listItemElement.classList.add('list__item_done');
-            }
-            const checkboxElement = document.createElement('input');
-            checkboxElement.setAttribute('type', 'checkbox');
-            checkboxElement.checked = done;
-            checkboxElement.classList.add('list__item-checkbox');
-            listItemElement.append(checkboxElement, text);
+        .map(({ id, text, done }) => {
 
-            return listItemElement;
+            const listItemElem = document.createElement('li');
+
+            const checkboxElement = document.createElement('input');
+
+            checkboxElement.addEventListener('input', onCheckboxEvent)
+
+            checkboxElement.classList.add('list__item-checkbox');
+
+            checkboxElement.setAttribute('type', 'checkbox');
+            checkboxElement.setAttribute("data-id", id);
+            checkboxElement.checked = done;
+            if (done) {
+                listItemElem.classList.add('list__item_done');
+            }
+
+            listItemElem.classList.add('list__item');
+            listItemElem.append(checkboxElement, text);
+
+            return listItemElem;
         })
-    listElement.append(...listItemsElements);
+
+    listElement.append(...arrList);
+    renderListItems(tasks);
 };
+const onCheckBoxClick = event => {
+    //Проверяет есть ли этот класс внутри
+    const isCheckboxElement = event.target.classList.contains('list__item-checkbox')
+
+    // Если не сидения то я просто выхожу
+    if (!isCheckboxElement) {
+        return;
+    }
+    const arr1 = tasks.find(e =>
+        console.log(e.id) === Number(event.target.dataset.id));
+    arr1.done = event.target.checked;
+};
+
+listElement.addEventListener("click", onCheckBoxClick);
 
 console.log(renderListItem(tasks));
