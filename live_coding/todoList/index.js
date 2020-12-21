@@ -43,3 +43,21 @@ const onCheckBoxClick = (event) => {
     renderListItems(tasks)
 }
 listElement.addEventListener("click", onCheckBoxClick);
+
+const inputElem = document.querySelector('.task-input');
+const createButton = document.querySelector('.create-task-btn');
+
+const onInputCreate = () => {
+    if (inputElem.value === "") {
+        return;
+    }
+    tasks.push({
+        id: Number(`${tasks.length + 1}`),
+        text: inputElem.value,
+        done: false
+    });
+    inputElem.value = "";
+    renderListItems(tasks);
+
+}
+createButton.addEventListener('click', onInputCreate);
